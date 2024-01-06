@@ -1,3 +1,16 @@
+<?php
+    //if(isset($_POST['submit'])){
+    //    print_r($_POST['email']);
+    //}
+
+        include_once('assets/php/config.php');
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $final = mysqli_query($connection, "INSERT INTO usuarios(email, senha) VALUES ('$email', '$password')");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +27,7 @@
 
 <body>
     <main id="container">
-        <form id="login_esp">
+        <form action="index.php" method="POST" id="login_esp">
             <div id="header_login">
                 <div id="img_box">
                     <img src="assets/images/cakee.png" alt="bolo">
@@ -58,7 +71,7 @@
                     </label>
                 </div>
                 <a href="#" id="esqueceu_senha">Esqueceu sua senha?</a>
-                <button type="submit" id="button">Entrar</button>
+                <button type="submit" name="submit" id="button">Entrar</button>
             </div>
 
 
