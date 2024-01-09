@@ -3,7 +3,7 @@
     //    print_r($_POST['email']);
     //}
 
-        include_once('assets/php/config.php');
+    include_once('assets/php/config.php');
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -27,13 +27,13 @@
 
 <body>
     <main id="container">
-        <form action="index.php" method="POST" id="login_esp">
+        <form action="pag_log.php" method="POST" id="login_esp">
             <div id="header_login">
                 <div id="img_box">
                     <img src="assets/images/cakee.png" alt="bolo">
                 </div>
                 <h1>RECIPES</h1>
-                <h2>Login</h2>
+                <h2>Sign In</h2>
                 <i id="moon_icon" class="fa-solid fa-moon"></i>
 
             </div>
@@ -63,15 +63,16 @@
 
                 <div class="input_caixa">
                     <label for="password">
-                        Senha
+                        Password
                         <div class="input_field">
                             <i class="fa-solid fa-lock"></i>
                             <input type="password" name="password" id="password">
                         </div>
                     </label>
                 </div>
-                <a href="#" id="esqueceu_senha">Esqueceu sua senha?</a>
-                <button type="submit" name="submit" id="button">Entrar</button>
+                
+                <a href="#" id="esqueceu_senha">I forgot my password</a>
+                <button type="submit" name="submit" id="button">Sign In</button>
             </div>
 
 
