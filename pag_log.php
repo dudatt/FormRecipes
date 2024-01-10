@@ -3,12 +3,9 @@
     //    print_r($_POST['email']);
     //}
 
-    include_once('assets/php/config.php');
+    //include_once('assets/php/config.php');
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $final = mysqli_query($connection, "INSERT INTO usuarios(email, senha) VALUES ('$email', '$password')");
+    //$login = mysqli_query($connection, "INSERT INTO usuarios(email, senha) VALUES ('$email', '$password')");
 ?>
 
 <!DOCTYPE html>

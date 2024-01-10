@@ -1,3 +1,16 @@
+<?php
+    include_once('assets/php/config.php');
+
+    $user = $_POST['usuario'];
+    $email = $_POST['email'];
+    $dt_nasc = $_POST['dt_nasc'];
+    $gender = $_POST['genero'];
+    $password = $_POST['password'];
+
+    $cadastro = mysqli_query($connection, "INSERT TO usuarios(user, email, dt_nascimento, genero, senha) VALUES ($user, $email, $dt_nasc, $gender, $password)")
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +21,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <title>Recipes</title>
     <style>
         #lado_esq {
             position: absolute;
@@ -55,6 +67,11 @@
             text-indent: 10px;
             font-weight: normal;
             font-size: 25px;
+        }
+
+        img {
+           width: 40%;
+           margin-top: 50px;
         }
 
         #cad_spc {
@@ -107,9 +124,20 @@
             font-size: 17px;
         }
 
+        .dark#all {
+            background: var(--background-dark);
+            transition: 0.6s;
+        }
+
+        .dark#cad_spc {
+            background: var(--cor-dark-1-3);
+            color: var(--cor-light-1-1);
+            transition: 0.6s;
+        }
     </style>
+    <title>Recipes</title>
 </head>
-<body>
+<body id="all">
     <section id="lado_esq">
         <nav>
             <ul>
@@ -121,7 +149,7 @@
         <div id="intro">
             <h1 id="title">Welcome to your new cookbook!</h1>
             <h2 id="sub_title">Save your recipes and share with the communite.</h2>
-            <img src="#" alt="">
+            <img src="assets/images/full_cake.png" alt="">
         </div>
     </section>
 
@@ -131,18 +159,17 @@
                 <h2>RECIPES</h2>
                 <h3>Sign Up</h3>
                 <i id="moon_icon" class="fa-solid fa-moon"></i>
-            </div>
-
-            <div id="opc_login">
-                <a href="#">
-                    <img src="assets/images/gg_icon.png" alt="google">
-                </a>
-                <a href="#">
-                    <img src="assets/images/insta_icon.png" alt="instagram">
-                </a>
-                <a href="#">
-                    <img src="assets/images/face_icon.png" alt="email">
-                </a>
+                <div id="opc_login">
+                    <a href="#">
+                        <img src="assets/images/gg_icon.png" alt="google">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/insta_icon.png" alt="instagram">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/face_icon.png" alt="email">
+                    </a>
+                </div>
             </div>
 
             <div id="inputs">
@@ -172,7 +199,7 @@
                             Date of birth
                             <div class="input_field">
                                 <i class="fa-solid fa-user"></i>
-                                <input type="date" name="data_nasc" id="data_nasc">
+                                <input type="date" name="dt_nasc" id="dt_nasc">
                             </div>
                         </label>
                     </div>
@@ -197,7 +224,7 @@
                         </div>
                     </label>
                 </div>
-                <a href="#" id="tenho_conta">I've an account :) </a>
+                <a href="pag_log.php" id="tenho_conta">I've an account :) </a>
                 <button type="submit" id="button">Sign Up</button>
             </div>
         </form>
