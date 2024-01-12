@@ -1,3 +1,5 @@
+//corrigir
+
 let tema = document.getElementById('moon_icon');
 
 tema.addEventListener('click', () => {

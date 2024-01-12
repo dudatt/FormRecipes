@@ -1,13 +1,14 @@
 <?php
     include_once('assets/php/config.php');
 
-    $user = $_POST['usuario'];
-    $email = $_POST['email'];
-    $dt_nasc = $_POST['dt_nasc'];
-    $gender = $_POST['genero'];
-    $password = $_POST['password'];
+    $user = isset($_POST['usuario']) ? $_POST['usuario'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $gender = isset($_POST['genero']) ? $_POST['genero'] : '';
+    $password = isset($_POST['senha']) ? $_POST['senha'] : '';
 
-    $cadastro = mysqli_query($connection, "INSERT TO usuarios(user, email, dt_nascimento, genero, senha) VALUES ($user, $email, $dt_nasc, $gender, $password)")
+
+    $cadastro = mysqli_query($connection, "INSERT INTO USUARIOS(NOME_USER, GENERO, EMAIL, SENHA) VALUES ('$user', '$gender', '$email', '$password')");
+
 ?>
 
 
@@ -21,123 +22,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <style>
-        #lado_esq {
-            position: absolute;
-            width:55%;
-            z-index: 1;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            gap: 40px;
-            margin-top: 30px;
-            justify-content: center;
-        }
-
-        a {
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-            font-size:18px;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            transform: scale(1.08);
-            font-size: 20px;
-        }
-
-        #intro {
-            position: absolute;
-            justify-content: center;
-            text-align: center;
-            top: 200px;
-            left: 95px;
-        }
-
-        #title {
-            font-size: 40px;
-            font-weight: bolder;
-        }
-
-        #sub_title {
-            text-indent: 10px;
-            font-weight: normal;
-            font-size: 25px;
-        }
-
-        img {
-           width: 40%;
-           margin-top: 50px;
-        }
-
-        #cad_spc {
-            position: relative;
-            background: var(--cor-light-1-1);
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            height: 100%;
-            left: 447px;
-            border-radius: 20px 0 0 20px;
-        }
-
-        h2 {
-            font-size: 30px;
-        }
-
-        .header_cab {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding: 30px 0 15px 0; 
-        }
-
-        #inputs {
-            gap: 30px;
-        }
-
-        #nasc_gen {
-            position: relative;
-        }
-
-        #genero{
-            position: absolute;
-            left: 50%;
-            top: 4.5px;
-        }
-
-        #tenho_conta {
-            color: var(--cor-light-1-3);
-            font-size: 15px; 
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        #tenho_conta:hover {
-            transform: scale(1.05);
-            font-size: 17px;
-        }
-
-        .dark#all {
-            background: var(--background-dark);
-            transition: 0.6s;
-        }
-
-        .dark#cad_spc {
-            background: var(--cor-dark-1-3);
-            color: var(--cor-light-1-1);
-            transition: 0.6s;
-        }
-    </style>
     <title>Recipes</title>
 </head>
-<body id="all">
+<body>
     <section id="lado_esq">
         <nav>
             <ul>
@@ -154,7 +41,7 @@
     </section>
 
     <main id="container">
-        <form action="" id="cad_spc">
+        <form action="index.php" id="cad_spc" method="POST">
             <div class="header_cab">
                 <h2>RECIPES</h2>
                 <h3>Sign Up</h3>
@@ -187,33 +74,21 @@
                     <label for="email">
                         E-mail
                         <div class="input_field">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             <input type="email" name="email" id="email">
                         </div>
                     </label>
                 </div>
                 
-                <div id="nasc_gen">
-                    <div class="input_caixa">
-                        <label for="data_nasc">
-                            Date of birth
-                            <div class="input_field">
-                                <i class="fa-solid fa-user"></i>
-                                <input type="date" name="dt_nasc" id="dt_nasc">
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="input_caixa" id="genero">
+                <div class="input_caixa" id="genero">
                         <label for="genero">
                             Gender
                             <div class="input_field">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-person"></i>
                                 <input type="text" name="genero" id="genero">
                             </div>
                         </label>
                     </div>
-                </div>
 
                 <div class="input_caixa">
                     <label for="password">
@@ -225,8 +100,11 @@
                     </label>
                 </div>
                 <a href="pag_log.php" id="tenho_conta">I've an account :) </a>
+            </div>
+            <div id="botao">
                 <button type="submit" id="button">Sign Up</button>
             </div>
+            
         </form>
     </main>
 </body>

@@ -33,6 +33,98 @@
 }
 
 
+#lado_esq {
+    position: absolute;
+    width:55%;
+    z-index: 1;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:18px;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: scale(1.08);
+    font-size: 20px;
+}
+
+#intro {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 200px;
+    left: 95px;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#sub_title {
+    text-indent: 10px;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+img {
+   width: 40%;
+   margin-top: 50px;
+}
+
+#cad_spc {
+    position: relative;
+    background: var(--cor-light-1-1);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    left: 447px;
+    border-radius: 20px 0 0 20px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.header_cab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px 0 15px 0; 
+}
+
+#nasc_gen {
+    position: relative;
+}
+
+#tenho_conta {
+    color: var(--cor-light-1-3);
+    font-size: 15px; 
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#tenho_conta:hover {
+    transform: scale(1.05);
+    font-size: 17px;
+}
+
 #login_esp {
     position: relative;
     background: var(--cor-light-1-1);
@@ -101,8 +193,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
-    padding: 0 40px 0 40px ;
+    gap: 35px;
+    padding: 0 40px 0 40px;
     font-size: 18px;
 }
 
@@ -134,20 +226,15 @@
     outline: none;
 }
 
-#esqueceu_senha {
-    color: var(--cor-light-1-3);
-    font-size: 15px; 
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-#esqueceu_senha:hover {
-    transform: scale(1.05);
-    font-size: 17px;
+#botao {
+    display: flex;
+    padding: 0 40px;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 #button {
-    padding: 8px ;
+    padding: 8px 220px;
     border: none;
     border-radius: 15px;
     background: var(--cor-light-1-3);
@@ -157,6 +244,8 @@
     transition: 0.2s;
     font-size: 18px;
 }
+
+
 
 #button:hover {
     transform: scale(1.05);

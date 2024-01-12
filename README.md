@@ -1,3 +1,3 @@
-# Formulario de cadastro e login
+# Formulario de cadastro
  
 🧁 Praticando css, php e sql
