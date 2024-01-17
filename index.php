@@ -1,13 +1,12 @@
 <?php
-    include_once('assets/php/config.php');
+    include_once('assets/php/config.php'); //resolver problema do 1° envio(ta vazio essa bosta)
 
-    $user = isset($_POST['usuario']) ? $_POST['usuario'] : '';
+    $user = isset($_POST['user']) ? $_POST['user'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $gender = isset($_POST['genero']) ? $_POST['genero'] : '';
-    $password = isset($_POST['senha']) ? $_POST['senha'] : '';
+    $pronoun = isset($_POST['pronoun']) ? $_POST['pronoun'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-
-    $cadastro = mysqli_query($connection, "INSERT INTO USUARIOS(NOME_USER, GENERO, EMAIL, SENHA) VALUES ('$user', '$gender', '$email', '$password')");
+    $cadastro = mysqli_query($connection, "INSERT INTO USUARIOS(NOME_USER, PRONOME, EMAIL, SENHA) VALUES ('$user', '$pronoun', '$email', '$password')");
 
 ?>
 
@@ -65,7 +64,7 @@
                         User Name
                         <div class="input_field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" id="usuario">
+                            <input type="text" id="usuario" required>
                         </div>
                     </label>
                 </div>
@@ -75,7 +74,7 @@
                         E-mail
                         <div class="input_field">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="email">
+                            <input type="email" id="email" required>
                         </div>
                     </label>
                 </div>
@@ -85,7 +84,7 @@
                             Pronoun
                             <div class="input_field">
                                 <i class="fa-solid fa-person"></i>
-                                <input type="text" id="pronoun" list="ipronoun">
+                                <input type="text" id="pronoun" list="ipronoun" required>
                                 <datalist id="ipronoun">
                                     <option>she/her</option>
                                     <option>he/him</option>
@@ -100,7 +99,7 @@
                         Password
                         <div class="input_field">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="password">
+                            <input type="password" id="password" required>
                         </div>
                     </label>
                 </div>
