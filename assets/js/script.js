@@ -1,21 +1,15 @@
-//corrigir
+const theme = document.getElementById('moon_icon');
 
-let tema = document.getElementById('moon_icon');
+theme.addEventListener('click', () => {
+    const cont = document.getElementById('container');
 
-tema.addEventListener('click', () => {
-    const container = document.getElementById('container');
-    const form = document.getElementById('login_esp');
-    if (tema.classList.contains('fa-moon')){
-        tema.classList.remove('fa-moon');
-        tema.classList.add('fa-sun');
-
-        container.classList.add('dark');
-        form.classList.add('dark');
-        return
+    if(theme.classList.contains('fa-moon')) {
+        theme.classList.remove('fa-moon');
+        theme.classList.add('fa-sun');
+        cont.classList.add('dark');
+        return;
     }
-    tema.classList.add('fa-moon');
-    tema.classList.remove('fa-sun');
-    container.classList.remove('dark');
-    form.classList.remove('dark');
-})
-
+    theme.classList.remove('fa-sun');
+    theme.classList.add('fa-moon');
+    cont.classList.remove('dark');
+});

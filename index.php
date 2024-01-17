@@ -65,7 +65,7 @@
                         User Name
                         <div class="input_field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="usuario" id="usuario">
+                            <input type="text" id="usuario">
                         </div>
                     </label>
                 </div>
@@ -75,17 +75,22 @@
                         E-mail
                         <div class="input_field">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" name="email" id="email">
+                            <input type="email" id="email">
                         </div>
                     </label>
                 </div>
                 
-                <div class="input_caixa" id="genero">
-                        <label for="genero">
-                            Gender
+                <div class="input_caixa" id="pronome">
+                        <label for="pronome">
+                            Pronoun
                             <div class="input_field">
                                 <i class="fa-solid fa-person"></i>
-                                <input type="text" name="genero" id="genero">
+                                <input type="text" id="pronoun" list="ipronoun">
+                                <datalist id="ipronoun">
+                                    <option>she/her</option>
+                                    <option>he/him</option>
+                                    <option>other</option>
+                                </datalist>
                             </div>
                         </label>
                     </div>
@@ -95,7 +100,7 @@
                         Password
                         <div class="input_field">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" name="password" id="password">
+                            <input type="password" id="password">
                         </div>
                     </label>
                 </div>
@@ -104,8 +109,8 @@
             <div id="botao">
                 <button type="submit" id="button">Sign Up</button>
             </div>
-            
         </form>
     </main>
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
