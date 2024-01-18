@@ -12,9 +12,7 @@
  <li>color adobe</li>
  <li>figma</li>
 </ul>
-<br>
 • Resultado:
-<br>
 <img src="assets/images/01.png" >
 <img src="assets/images/02.png" >
 <img src="assets/images/03.png" >
