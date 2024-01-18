@@ -1,15 +1,13 @@
 <?php
     $conecction = mysqli_connect('localhost', 'root', '', 'form_recipes');
-    //cheking connection
+    //    cheking connection
     if(!$conecction){
         echo "não conectado";
     } echo "conectado ao banco";
 
     //capturing and checking if the data is in the data base
     $user = $_POST['user'];
-    $email = $_POST['email'];
     $user = mysqli_real_escape_string($conecction, $user);
-    $email = mysqli_real_escape_string($conecction, $email);
 
     $sql = "SELECT USER_NAME FROM form_recipes.usuarios WHERE USER_NAME ='$user'";
     $return = mysqli_query($conecction, $sql);

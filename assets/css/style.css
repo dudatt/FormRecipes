@@ -65,6 +65,7 @@ a:hover {
     text-align: center;
     top: 200px;
     left: 95px;
+    cursor:default;
 }
 
 #title {
@@ -94,8 +95,8 @@ img {
     border-radius: 20px 0 0 20px;
 }
 
-h2 {
-    font-size: 30px;
+h1, h3 {
+   cursor: default; 
 }
 
 .header_cab {
@@ -194,13 +195,6 @@ h2 {
     outline: none;
 }
 
-#botao {
-    display: flex;
-    padding: 0 40px;
-    justify-content: center;
-    margin-top: 15px;
-}
-
 #button {
     padding: 8px 220px;
     border: none;
@@ -218,13 +212,7 @@ h2 {
     box-shadow: 3px 3px rgba(148, 146, 146, 0.4);
 }
 
-.dark#container {
+.dark#container { /*não sei como mexer no form T_T */
     background: var(--background-dark);
-    
-    transition: 0.6s;
-}
-
-.dark#cad_spc{
-    background: var(--cor-dark-1-1);
     transition: 0.6s;
 }
