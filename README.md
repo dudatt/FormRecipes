@@ -10,7 +10,7 @@
  <li>favicon</li>
  <li>GIMP</li>
  <li>color adobe</li>
- <li>>figma</li>
+ <li>figma</li>
 </ul>
 <br>
 • Resultado:
