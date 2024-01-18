@@ -31,8 +31,6 @@
     position: relative;
     transition: 0.6s;
 }
-
-
 #lado_esq {
     position: absolute;
     width:55%;
@@ -87,6 +85,7 @@ img {
 
 #cad_spc {
     position: relative;
+    background: var(--cor-light-1-1);
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -107,11 +106,6 @@ h2 {
     position: relative;
     padding: 30px 0 15px 0; 
 }
-
-#nasc_gen {
-    position: relative;
-}
-
 #tenho_conta {
     color: var(--cor-light-1-3);
     font-size: 15px; 
@@ -122,30 +116,6 @@ h2 {
 #tenho_conta:hover {
     transform: scale(1.05);
     font-size: 17px;
-}
-
-#login_esp {
-    position: relative;
-    background: var(--cor-light-1-1);
-    display: flex;
-    flex-direction: column;
-    width: 28%;
-    height: 65%;
-    border-radius: 20px;
-    transition: 0.6s;
-}
-
-#header_login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 50px 0 15px 0; 
-}
-
-#header_login h2:hover{
-    cursor: default;
 }
 
 #img_box {
@@ -250,6 +220,11 @@ h2 {
 
 .dark#container {
     background: var(--background-dark);
-    color: var(--cor-light-1-2);
+    
+    transition: 0.6s;
+}
+
+.dark#cad_spc{
+    background: var(--cor-dark-1-1);
     transition: 0.6s;
 }

@@ -14,12 +14,12 @@ theme.addEventListener('click', () => {
     cont.classList.remove('dark');
 });
 
-    function valEmail(){
-        let email = document.getElementById('email');
-        const re = /^\w.+@\w{5,7}.*\.\w{3}$/; //corrigir o regex
-        if (re.test(email)){
-            alert('deu bom');
-        } else {
-            alert('deu ruim fia');
-        }
+function valEmail(){
+    let email = document.getElementById('email');
+    const re = /^\w.+@\w{5,7}.*\.\w{3}$/; //corrigir o regex
+    if (re.test(email)){
+        alert('deu bom');
+    } else {
+        alert('deu ruim fia');
     }
+}

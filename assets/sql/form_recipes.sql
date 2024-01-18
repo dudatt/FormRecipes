@@ -8,4 +8,19 @@ CREATE TABLE USUARIOS (
   SENHA VARCHAR(15) NOT NULL
 );
 
-SELECT * FROM USUARIOS;
+ALTER TABLE usuarios
+CHANGE NOME_USER USER_NAME VARCHAR(50),
+CHANGE PRONOME EMAIL VARCHAR(100),
+CHANGE EMAIL PRONOUN VARCHAR(30),
+CHANGE SENHA PASSWORD_ VARCHAR(15);
+
+select * from usuarios;
+
+-- Desativa temporariamente as chaves estrangeiras
+SET foreign_key_checks = 0;
+
+-- Realiza a operação DELETE ou TRUNCATE
+TRUNCATE TABLE usuarios;
+
+-- Ativa novamente as chaves estrangeiras
+SET foreign_key_checks = 1;
