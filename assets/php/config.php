@@ -26,6 +26,6 @@
         VALUES ('$user', '$email', '$pronoun', '$password')";
 
         $result = mysqli_query($conecction, $sql);
-        echo "USUARIO CADASTRADO COM SUCESSO(PFV!!!!!!!!)"; 
+        echo "USUARIO CADASTRADO COM SUCESSO"; 
     }
 ?>
