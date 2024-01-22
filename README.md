@@ -1,10 +1,17 @@
-# Formulario de cadastro
+# 🧁 Formulario de cadastro
  
-🧁 Formulário de cadastro com armazenamento de dados.
+Formulário de cadastro com armazenamento de dados.
 <br>
-• Desenvolvido com: HTML, CSS, JS, PHP, SQL. 
+⌨ Tecnologias: 
+<ul>
+ <li>HTML</li>
+ <li>CSS</li>
+ <li>JS</li>
+ <li>PHP</li>
+ <li>SQL</li>
+<\ul> 
 <br>
-• Ferramentas utilizadas: 
+⚙ Ferramentas Utilizadas: 
 <ul>
  <li>font awesome</li>
  <li>favicon</li>
@@ -14,5 +21,4 @@
 </ul>
 • Resultado:
 <img src="assets/images/01.png" >
-<img src="assets/images/02.png" >
 <img src="assets/images/03.png" >
