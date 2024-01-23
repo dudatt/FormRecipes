@@ -1,4 +1,4 @@
-const theme = document.getElementById('moon_icon');
+const theme = document.getElementById('moon_icon'); /* tá funcionado pela metade */
 
 theme.addEventListener('click', () => {
     const cont = document.getElementById('container');
