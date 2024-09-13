@@ -1,6 +1,6 @@
-# 🧁 Formulario de cadastro
+# 🧁 Recipes
  
-Formulário de cadastro com armazenamento de dados.
+Prática de formulário de cadastro com armazenamento de dados.
 
 # ⌨️ Tecnologias: 
  * HTML
